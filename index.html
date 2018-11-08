@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/javascript/app.js"></script>
+    </head>
+
+    <div class="container">
+        <div id="title">
+            <h1>Rock-Paper-Scissors</h1>
+        </div>
+        <div id="players">
+            <div id="player-one-div" class="player-div">
+                <div id="player-one-new" class="hidden">
+                    Enter your Name
+                    <input type="text" placeholder="Enter Name" id="player-one-name">
+                    <button type="button" id="player-one-submit">Enter</button>
+                </div>
+                <div id="player-one-exists" class="hidden">
+                    <h3 id="player-one-name-display"></h3>
+                </div>
+            </div>
+            <div id="results-div" class="player-div">
+                Win
+            </div>
+            <div id="player-two-div" class="player-div">
+                <div id="player-two-new" class="hidden">
+                    Enter your name
+                    <input type="text" placeholder="Enter Name" id="player-two-name">
+                    <button type="button" id="player-two-submit">Enter</button>
+                </div>
+                <div id="player-two-exists" class="hidden">
+                        <h3 id="player-two-name-display"></h3>
+                </div>
+            </div>
+        </div>
+        <button type="button" id="end">End Game</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".player-div").height($(".player-div").width());
+            $(window).resize(function(){
+                $(".player-div").height($(".player-div").width());
+            });
+        });        
+    </script>
+</html>

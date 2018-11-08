@@ -1,0 +1,30 @@
+.container {
+    width: 90%;
+    background: #cccccc;
+    min-height: calc(100vh - 6em);
+    margin: 2em auto 2em auto;
+    padding: 1em;   
+    text-align: center;
+}
+
+#players {
+    width: 90%;
+    margin: 1em auto 1em auto;
+    background: #aaaaaa;
+    height: 100%;
+    padding: 2em;
+    text-align: center;
+}
+
+.player-div {
+    width: calc(32% - 3em);
+    background: #dddddd;
+    display: inline-block;
+    padding: 1em;
+    margin: 0.5em;
+    vertical-align: top;
+}
+
+.hidden {
+    display: none;
+}
