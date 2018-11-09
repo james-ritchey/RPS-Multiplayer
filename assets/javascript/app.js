@@ -1,13 +1,4 @@
 $(document).ready(function(){
-    // Initialize Firebase
-    var config = {
-        authDomain: "rpsgame-9170a.firebaseapp.com",
-        databaseURL: "https://rpsgame-9170a.firebaseio.com",
-        projectId: "rpsgame-9170a",
-        storageBucket: "rpsgame-9170a.appspot.com",
-        messagingSenderId: "760808198582"
-    };
-    firebase.initializeApp(config);
 
     var database = firebase.database();
 
