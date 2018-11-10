@@ -28,3 +28,11 @@
 .hidden {
     display: none;
 }
+
+#player1-local, #player2-local {
+    margin: 1em;
+}
+
+li {
+    margin: 0.5em;
+}
