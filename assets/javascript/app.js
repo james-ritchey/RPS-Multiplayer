@@ -1,20 +1,13 @@
 $(document).ready(function(){
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBQi7J68zWrCHs-AAtoiK9VKl59jSrXJkg",
-        authDomain: "rpsgame-9170a.firebaseapp.com",
-        databaseURL: "https://rpsgame-9170a.firebaseio.com",
-        projectId: "rpsgame-9170a",
-        storageBucket: "rpsgame-9170a.appspot.com",
-        messagingSenderId: "760808198582"
-    };
-    firebase.initializeApp(config);
+    
 
     var database = firebase.database();
 
     var game = {
         player1: "",
         player2: "",
+        isPlayer1: false,
+        isPlayer2: false,
         player1ready: false,
         player2ready: false,
         player1choice: "",
@@ -37,6 +30,8 @@ $(document).ready(function(){
     var gameReset = {
         player1: "",
         player2: "",
+        isPlayer1: false,
+        isPlayer2: false,
         player1ready: false,
         player2ready: false,
         player1choice: "",
@@ -107,6 +102,7 @@ $(document).ready(function(){
             $("#player-one-new").css("display", "none");
             $("#player-one-exists").css("display", "inline");
             $("#player-one-name-display").text(game.player1);
+            game.isPlayer1 = true;
         }
         console.log(game.player1);
     });
@@ -120,6 +116,7 @@ $(document).ready(function(){
             $("#player-two-new").css("display", "none");
             $("#player-two-exists").css("display", "inline");
             $("#player-two-name-display").text(game.player2);
+            game.isPlayer2 = true;
         }
         console.log($("#player-two-name").val().trim());
         console.log(game.player2);
