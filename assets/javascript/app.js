@@ -87,11 +87,6 @@ $(document).ready(function(){
         }
     });
 
-    database.ref("game/player2").on("value", function(snapshot){
-        if(snapshot.val() !== "")
-        console.log("PLAYER2 CHANGED TO " + snapshot.val() + " AH");
-    });
-
     $("#player-one-submit").on("click", function(){
         if($("#player-one-name").val().trim() !== "" && game.player1 === "") {
             game.player1 = $("#player-one-name").val().trim();
