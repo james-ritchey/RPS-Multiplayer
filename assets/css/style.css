@@ -2,14 +2,14 @@
     width: 90%;
     background: #cccccc;
     min-height: calc(100vh - 6em);
-    margin: 2em auto 2em auto;
+    margin: 0 auto 0 auto;
     padding: 1em;   
     text-align: center;
 }
 
 #players {
-    width: 90%;
-    margin: 1em auto 1em auto;
+    width: 75%;
+    margin: 1em auto 0 auto;
     background: #aaaaaa;
     height: 100%;
     padding: 2em;
@@ -60,7 +60,9 @@ h3 {
 }
 
 #chat-div {
-    height: 15em;
+    height: 100%;;
+    width: 75%;
+    margin: auto;
     background: #aaaaaa;
     padding: 1em;
 }
