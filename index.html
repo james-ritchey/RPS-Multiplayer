@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
@@ -16,41 +17,65 @@
         <div id="players">
             <div id="player-one-div" class="player-div">
                 <div id="player-one-new" class="hidden">
-                    Enter your Name
+                    <p>Enter your name</p>
                     <input type="text" placeholder="Enter Name" id="player-one-name">
-                    <button type="button" id="player-one-submit">Enter</button>
+                    <button type="button" id="player-one-submit">Join</button>
                 </div>
                 <div id="player-one-exists" class="hidden">
                     <h3 id="player-one-name-display"></h3>
+                    <h5>Wins: <span id="player-one-wins">0</span> || Losses: <span id="player-one-losses">0</span></h5>
                     <div id="player1-local" class="hidden">
-                        <ul>
+                        <ul id="player-one-answers">
                             <li>Rock</li>
                             <li>Paper</li>
                             <li>Scissors</li>
                         </ul>
+                        <div id="player-one-choice">
+
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="results-div" class="player-div">
-                Win
+                <h3>Results</h3>
+                <div id="results">
+
+                </div>
+                <div id="player-one-results">
+
+                </div>
+                <div id="player-two-results">
+
+                </div>
             </div>
             <div id="player-two-div" class="player-div">
                 <div id="player-two-new" class="hidden">
-                    Enter your name
+                    <p>Enter your name</p>
                     <input type="text" placeholder="Enter Name" id="player-two-name">
-                    <button type="button" id="player-two-submit">Enter</button>
+                    <button type="button" id="player-two-submit">Join</button>
                 </div>
                 <div id="player-two-exists" class="hidden">
-                        <h3 id="player-two-name-display"></h3>
-                        <div id="player2-local" class="hidden">
-                            <ul>
-                                <li>Rock</li>
-                                <li>Paper</li>
-                                <li>Scissors</li>
-                            </ul>
+                    <h3 id="player-two-name-display"></h3>
+                    <h5>Wins: <span id="player-two-wins">0</span> || Losses: <span id="player-two-losses">0</span></h5>
+                    <div id="player2-local" class="hidden">
+                        <ul id="player-two-answers">
+                            <li>Rock</li>
+                            <li>Paper</li>
+                            <li>Scissors</li>
+                        </ul>
+                        <div id="player-two-choice">
+
                         </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="chat-div">
+            <div id="messages">
+
+            </div>
+            <input type="text" placeholder="Enter a message..." id="send-message">
+            <button type="button" id="send">Send</button>
         </div>
         <button type="button" id="end">End Game</button>
     </div>
