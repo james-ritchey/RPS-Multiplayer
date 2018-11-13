@@ -7,10 +7,6 @@ $(document).ready(function(){
     var game = {
         player1: "",
         player2: "",
-        isPlayer1: false,
-        isPlayer2: false,
-        player1ready: false,
-        player2ready: false,
         player1choice: "",
         player2choice: "",
         gameStarted: false,
@@ -33,8 +29,6 @@ $(document).ready(function(){
         reset: function(){
             this.player1 = "";
             this.player2 = "";
-            this.player1ready = false;
-            this.player2ready = false;
             this.player1choice = "";
             this.player2choice = "";
             this.gameStarted = false;
@@ -52,6 +46,8 @@ $(document).ready(function(){
             $("#player-two-answers").css("display", "block");
             $("#player-one-local").css("display", "none");
             $("#player-two-local").css("display", "none");
+            $("#player1-local").css("display", "none");
+            $("#player2-local").css("display", "none");
         }
 
     }
@@ -59,10 +55,6 @@ $(document).ready(function(){
     var gameReset = {
         player1: "",
         player2: "",
-        isPlayer1: false,
-        isPlayer2: false,
-        player1ready: false,
-        player2ready: false,
         player1choice: "",
         player2choice: "",
         gameStarted: false,
@@ -225,6 +217,9 @@ $(document).ready(function(){
             $("#messages").prepend(newMessage);
         }
     });
+
+    database.ref("game/").onDisconnect().set(gameReset);
+    database.ref("chat/").onDisconnect().set("");
 
     $("#player-one-submit").on("click", function(){
         if($("#player-one-name").val().trim() !== "" && game.player1 === "") {

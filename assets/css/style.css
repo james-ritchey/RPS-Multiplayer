@@ -1,28 +1,40 @@
+body {
+    background-image: url("../images/escheresque_ste.png");
+}
+
 .container {
     width: 90%;
-    background: #cccccc;
-    min-height: calc(100vh - 6em);
-    margin: 0 auto 0 auto;
+    background: #484241;
+    min-height: calc(100vh - 4em);
+    margin: 1em auto 1em auto;
     padding: 1em;   
     text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    text-shadow: 2px 2px #3E3938;
+    border: 3px solid #313131;
 }
 
 #players {
     width: 75%;
     margin: 1em auto 0 auto;
-    background: #aaaaaa;
+    background: #3E3938;
     height: 100%;
-    padding: 2em;
+    padding: 2em 2em 2em 2em;
     text-align: center;
+    box-shadow: 0px 0px 20px 20px #3E3938;
+    border-radius: 10px; 
 }
 
 .player-div {
     width: calc(32% - 3em);
-    background: #dddddd;
+    background: #615857;
     display: inline-block;
     padding: 1em;
     margin: 0.5em;
     vertical-align: top;
+    border-radius: 6px;
+    border: 2px solid #313131;
 }
 
 .player-div p {
@@ -43,7 +55,8 @@
 }
 
 #results {
-    font-size: 150%;
+    font-size: 225%;
+    padding-top: 2em;
 }
 
 li {
@@ -52,7 +65,8 @@ li {
 }
 
 h1 {
-    font-size: 250%;
+    font-size: 300%;
+    font-family: 'Sedgwick Ave', cursive;
 }
 
 h3 {
@@ -63,21 +77,55 @@ h3 {
     height: 100%;;
     width: 75%;
     margin: auto;
-    background: #aaaaaa;
-    padding: 1em;
+    background: #3E3938;
+    padding: 0 2em 2em 2em;
+    box-shadow: 0px 0px 10px 100px #313131;
 }
 
 #messages {
     width: 50%;
     margin: auto;
+    margin-bottom: 0.5em;
     height: 12em;
-    background: #dddddd;
+    background: #615857;
     overflow: auto;
     text-align: left;
-    padding: 0 0.5em 0 0.5em
+    padding: 0 0.5em 0 0.5em;
+    border: 2px solid #313131;
+    border-radius: 4px;
 }
 
 .message {
     border-bottom: 1px solid #aaaaaa;
     padding-bottom: 0.25em;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: #484241;
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    padding: 0.5em;
+}
+
+input {
+    border: 3px solid #3E3938;
+    background: #ac9c9a;
+    color: #ffffff; 
+    font-family: 'Fredoka One', cursive;
+    outline: none;
+    padding: 0.25em;
+}
+
+input::placeholder {
+    color: #777777;
+}
+
+#send {
+    background: #615857;
+}
+
+#send-message {
+    border: 3px solid #615857;
 }
